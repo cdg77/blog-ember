@@ -19,10 +19,19 @@
       </div>
       <div class="form-group">
         <label for="image" class='col-lg-2' control-label>Image URL</label>
-        {{input value=image id="image"}}
+        <div class="col-lg-10">
+          {{input value=image id="image"}}
+        </div>
       </div>
-
-      <button class="btn btn-default" {{action 'save1'}}>Save</button>
+      <div class="form-group">
+        <label for="blogPost" class="col-lg-2 control-label">Textarea</label>
+        <div class="col-lg-10">
+          <textarea class="form-control" rows="3" id="textArea">
+            {{input value=blogPost id="blogPost"}}
+          </textarea>
+        </div>
+      </div>
+      <button class="btn btn-default" {{action 'save'}}>Save</button>
     </fieldset>
   </form>
 

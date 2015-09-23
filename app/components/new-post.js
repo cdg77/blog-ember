@@ -5,6 +5,17 @@ export default Ember.Component.extend({
   actions: {
     postFormShow() {
       this.set('addNewPost', true);
+    },
+
+    save() {
+      var params = {
+        user: this.get('user'),
+        title: this.get('title'),
+        image: this.get('image'),
+        blogPost: this.get('blogPost')
+      };
+      this.set('addNewPost', false),
+      this.sendAction('save', params);
     }
   }
 });
