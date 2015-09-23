@@ -5,9 +5,11 @@
 
 <ul>
   {{#each model as |post|}}
-    <li>{{post.user}} posted: {{post.title}}</li>
+    {{post-tile post=post destroyPost="destroyPost"}}
   {{/each}}
 </ul>
+
+{{new-rental save2="save3"}}
 
 {{#link-to 'about'}}WhoWeAre{{/link-to}}<br>
 {{#link-to 'contact'}}ContactUs{{/link-to}}
