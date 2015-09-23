@@ -1,0 +1,13 @@
+<h1>EPIC Fail Blog</h1>
+<p>
+  This is a blog dedicated to the extraordinarly unextraordinary. This is intended to be a total faceplant!
+</p>
+
+<ul>
+  {{#each model as |post|}}
+    <li>{{post.user}} posted: {{post.title}}</li>  
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}WhoWeAre{{/link-to}}<br>
+{{#link-to 'contact'}}ContactUs{{/link-to}}
