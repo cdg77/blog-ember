@@ -1,1 +1,42 @@
-{{yield}}
+{{#if updatePostForm}}
+  <h4>Update {{post.users}}'s {{psot.title}}</h4>
+  <form class="form-horizontal" id="" action="" method="">
+    <fieldset>
+      <legend>UpdatePost</legend>
+      <div class="form-group">
+        <label for="user" class='col-lg-2' control-label>UserName</label>
+        <div class="col-lg-10">
+          {{input value=user id="user"}}
+          <!-- <input type="text" class="form-control" id="inputUserName" placeholder="name"> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="title" class='col-lg-2' control-label>Title</label>
+        <div class="col-lg-10">
+          {{input value=title id="title"}}
+          <!-- <input type="text" class="form-control" id="inputUserName" placeholder="name"> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="image" class='col-lg-2' control-label>Image URL</label>
+        <div class="col-lg-10">
+          {{input value=image id="image"}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="blogPost" class="col-lg-2 control-label">Blog:</label>
+        <div class="col-lg-10">
+            <!-- {{input value=blogPost id="blogPost"}} -->
+
+            {{textarea input value=blogPost id="blogPost" cols="80" rows="6"}}
+          <!-- <textarea class="form-control" rows="3" id="blogPost">
+          </textarea> -->
+        </div>
+      </div>
+      <button class="btn btn-default" {{action 'update' post}}>Save</button>
+    </fieldset>
+  </form>
+
+{{else}}
+  <button class="btn btn-success" {{action 'updatePostForm'}}>Update</button>
+{{/if}}
